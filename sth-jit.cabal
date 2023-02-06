@@ -36,7 +36,8 @@ library
 executable sth-jit
     import:           warnings
     main-is:          Main.hs
-    -- other-modules:
+    other-modules:
+        Hint
     -- other-extensions:
     build-depends:
         base ^>=4.17.0.0,
@@ -44,7 +45,11 @@ executable sth-jit
         ghc,
         vector,
         containers,
-        ghc-paths
+        ghc-paths,
+        time,
+        template-haskell,
+        exceptions
+        -- hint
 
     hs-source-dirs:   exe
     default-language: GHC2021
